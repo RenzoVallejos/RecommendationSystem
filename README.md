@@ -35,6 +35,28 @@ A scalable recommendation API built with Java Spring Boot, featuring collaborati
 - `GET /api/recommend/user/{userId}/async` - Async recommendations
 - `GET /api/recommend/similar/{movieId}` - Similar movies
 
+### Movies CRUD
+- `GET /api/movies` - Get all movies
+- `GET /api/movies/{id}` - Get movie by ID
+- `POST /api/movies` - Create new movie
+- `PUT /api/movies/{id}` - Update movie
+- `DELETE /api/movies/{id}` - Delete movie
+
+### Users CRUD
+- `GET /api/users` - Get all users
+- `GET /api/users/{id}` - Get user by ID
+- `POST /api/users` - Create new user
+- `PUT /api/users/{id}` - Update user
+- `DELETE /api/users/{id}` - Delete user
+
+### Ratings CRUD
+- `GET /api/ratings` - Get all ratings
+- `GET /api/ratings/{id}` - Get rating by ID
+- `GET /api/ratings/user/{userId}` - Get ratings by user
+- `POST /api/ratings` - Create new rating
+- `PUT /api/ratings/{id}` - Update rating
+- `DELETE /api/ratings/{id}` - Delete rating
+
 ## API Documentation
 
 **Interactive Swagger UI**: http://localhost:8080/swagger-ui.html
@@ -65,6 +87,11 @@ mvn spring-boot:run
 # Test the API
 curl "http://localhost:8080/api/search?query=matrix"
 curl "http://localhost:8080/api/recommend/user/1"
+
+# CRUD Operations
+curl "http://localhost:8080/api/movies"
+curl -X POST "http://localhost:8080/api/movies" -H "Content-Type: application/json" -d '{"title":"New Movie","description":"A great film"}'
+curl -X POST "http://localhost:8080/api/ratings" -H "Content-Type: application/json" -d '{"userId":1,"movieId":1,"score":4.5}'
 ```
 
 ## Architecture
