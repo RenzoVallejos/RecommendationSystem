@@ -66,13 +66,12 @@ A scalable recommendation API built with Java Spring Boot, featuring collaborati
 ## Quick Start
 
 ### Prerequisites
-```bash
-# Install dependencies
-brew install kafka zookeeper
+See `requirements.txt` for complete dependency list and installation commands.
 
-# Start services
-brew services start zookeeper
-brew services start kafka
+**Quick install (macOS):**
+```bash
+brew install openjdk@17 maven kafka redis
+brew services start zookeeper kafka redis
 ```
 
 ### Run Application

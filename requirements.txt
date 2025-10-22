@@ -1,0 +1,35 @@
+# Movie Recommendation System - Requirements
+# Install these dependencies before running the application
+
+# Core Requirements
+Java 17+
+Maven 3.6+
+
+# Message Streaming
+Apache Kafka 2.8+
+Apache Zookeeper 3.7+
+
+# Caching (Optional - app works without it)
+Redis 6.0+
+
+# Installation Commands (macOS):
+# brew install openjdk@17 maven kafka redis
+# brew services start zookeeper kafka redis
+
+# Installation Commands (Ubuntu/Debian):
+# sudo apt update
+# sudo apt install openjdk-17-jdk maven
+# wget https://downloads.apache.org/kafka/2.8.1/kafka_2.13-2.8.1.tgz
+# sudo apt install redis-server
+
+# Installation Commands (Windows):
+# Download and install Java 17 from Oracle/OpenJDK
+# Download Maven from https://maven.apache.org/download.cgi
+# Download Kafka from https://kafka.apache.org/downloads
+# Download Redis from https://redis.io/download
+
+# Verify Installation:
+# java -version (should show 17+)
+# mvn -version
+# kafka-topics --version
+# redis-cli ping (should return PONG)
